@@ -2,6 +2,7 @@
 
 API="http://localhost:4741"
 URL_PATH="/sign-out"
+ID="584f0d708d819f415e281a4a"
 
 curl "${API}${URL_PATH}/${ID}" \
   --include \

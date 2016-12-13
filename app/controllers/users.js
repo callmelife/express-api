@@ -36,6 +36,7 @@ const index = (req, res, next) => {
 
 const show = (req, res, next) => {
   User.findById(req.params.id, userFilter)
+    .populate('_books')
     .then(user => user ? res.json({ user }) : next())
     .catch(err => next(err));
 };
